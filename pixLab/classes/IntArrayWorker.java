@@ -112,16 +112,24 @@ public class IntArrayWorker
   public int getLargest(){
     int largest=0;
     for(int i=0;i<matrix.length;i++){
-      for(int j=0;j<matrix[i].length-1;j++){
-        if(matrix[i][j]>matrix[i][j+1]){
+      for(int j=0;j<matrix[i].length;j++){
+        if(matrix[i][j]>largest){
           largest=matrix[i][j];
-        }
-        else{
-          largest=matrix[i][j+1];
-          j=0;
+          j=-1;
         }
       }
     }
     return largest;
+  }
+  public int getColTotal(int col){
+    int count=0;
+    for(int i=0;i<matrix.length;i++){
+      for(int j=0;j<matrix[i].length;j++){
+        if(j==col){
+          count+=matrix[i][j];
+        }
+      }
+    }
+    return count;
   }
 }
