@@ -81,7 +81,9 @@ public class PictureTester
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
     //testMirrorVerticalRightToLeft();
-    testMirrorHorizontal();
+    //testMirrorHorizontal();
+    //testMirrorHorizontalBotToTop();
+    testMirrorArms();
   }
   public static void testMirrorVerticalRightToLeft(){
     Picture caterpillar = new Picture("caterpillar.jpg");
@@ -94,5 +96,17 @@ public class PictureTester
     caterpillar.explore();
     caterpillar.mirrorHorizontal();
     caterpillar.explore();
+  }
+  public static void testMirrorHorizontalBotToTop(){
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorHorizontal();
+    caterpillar.explore();
+  }
+  public static void testMirrorArms(){
+    Picture snowman = new Picture("snowman.jpg");
+    snowman.explore();
+    snowman.mirrorHorizontal();
+    snowman.explore();
   }
 }
