@@ -58,7 +58,7 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
+    //testZeroBlue();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
@@ -71,6 +71,7 @@ public class PictureTester
     //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
+    //testMyCollage();
     //testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();
@@ -83,7 +84,36 @@ public class PictureTester
     //testMirrorVerticalRightToLeft();
     //testMirrorHorizontal();
     //testMirrorHorizontalBotToTop();
-    testMirrorArms();
+    //testMirrorArms();
+    //testKeepOnlyBlue();
+    //testNegate();
+    //testGrayScale();
+    testFixUnderWater();
+    //testMirrorGull();
+  }
+  public static void testKeepOnlyBlue(){
+    Picture beach=new Picture("beach.jpg");
+    beach.explore();
+    beach.keepOnlyBlue();
+    beach.explore();
+  }
+  public static void testNegate(){
+    Picture beach=new Picture("beach.jpg");
+    beach.explore();
+    beach.negate();
+    beach.explore();
+  }
+  public static void testGrayScale(){
+    Picture beach=new Picture("beach.jpg");
+    beach.explore();
+    beach.grayScale();
+    beach.explore();
+  }
+  public static void testFixUnderWater(){
+    Picture water=new Picture("water.jpg");
+    water.explore();
+    water.fixUnderWater();
+    water.explore();
   }
   public static void testMirrorVerticalRightToLeft(){
     Picture caterpillar = new Picture("caterpillar.jpg");
@@ -106,7 +136,31 @@ public class PictureTester
   public static void testMirrorArms(){
     Picture snowman = new Picture("snowman.jpg");
     snowman.explore();
-    snowman.mirrorHorizontal();
+    snowman.mirrorArms();
     snowman.explore();
+  }
+  public static void testMirrorGull(){
+    Picture seaGull = new Picture("seagull.jpg");
+    seaGull.explore();
+    seaGull.mirrorGull();
+    seaGull.explore();
+  }
+  public static void testCopy(){
+    Picture seaGull = new Picture("seagull.jpg");
+    seaGull.explore();
+    seaGull.copy(new Picture("snowman.jpg"),278,254,50,270,80,200);
+    seaGull.explore();
+  }
+  public static void testMyCollage(){
+    Picture beach=new Picture("beach.jpg");
+    beach.explore();
+    beach.myCollage();
+    beach.explore();
+  }
+  public static void testEdgeDetection2(){
+    Picture swan=new Picture("swan.jpg");
+    swan.explore();
+    swan.edgeDetection2(10);
+    swan.explore();
   }
 }
